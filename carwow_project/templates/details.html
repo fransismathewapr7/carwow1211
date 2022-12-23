@@ -1,0 +1,19 @@
+{% extends 'base.html' %}
+{% block body %}
+<div class="container">
+    <div class="row">
+        <div class="col-md-6">
+            <img src="{{cars.img.url}}" alt="Card image cap" width="500" height="500">
+        </div>
+        <div class="col-md-6">
+            <h2>{{cars.name}}</h2>
+            <h4>{{cars.desc}}</h4>
+            <h1>{{cars.price}}</h1>
+            <a class="btn btn-warning" href="{% url 'carwowapp:update' cars.id %}">Update</a>
+            <a class="btn btn-danger" href="{% url 'carwowapp:delete' cars.id %}">Delete</a>
+        </div>
+    </div>
+</div>
+
+
+{% endblock %}
